@@ -5,7 +5,9 @@ Google Cloud Tools is a Python CLI tool to perform build basic reports and perfo
 ## Installation
 
 ### Step 1: Clone This Repository
-`git clone meow /[your-path]`
+```bash
+git clone https://github.com/thegnarwhal/google_drive_tools.git
+```
 
 ### Step 2: Install Required Python Packages
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the requirements to run Google Cloud Tools.
