@@ -28,6 +28,9 @@ Make sure to enable the Google Cloud Resource Manager API for your project.
 Grant access to your drive or folders in your drive to your newly created Service Account user, using the `client_email` value from your Service Account's .json file.
 
 ## How to Use
+Please note, all script files identify a `source_id`. To find your folder's source id:
+1. Navigate to the folder in Google Drive.
+2. Copy the Folder ID found in the URL. This is everything that comes after “folder/” in the URL. For example, if the URL was “https://drive.google.com/drive/folders/1dyUEebJaFnWa3Z4n0BFMVAXQ7mfUH11g”, then the `source_id`` would be "1dyUEebJaFnWa3Z4n0BFMVAXQ7mfUH11g”
 
 ### count_folder.py
 Finds a count of files and folders any given folder, using the folder's source ID.
