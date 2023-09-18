@@ -20,6 +20,7 @@ pip install -r requirements.txt
 Create a Project and Service Account. Follow:
 * https://developers.google.com/workspace/guides/create-project 
 * https://developers.google.com/workspace/guides/create-credentials 
+
 You will need to save the .json output to a new file later on.
 
 Make sure to enable the Google Cloud Resource Manager API for your project.
