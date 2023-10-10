@@ -7,7 +7,7 @@ def authenticate_drive_api(credentials_path):
     # Authenticate using the service account key JSON file
     credentials = service_account.Credentials.from_service_account_file(
         credentials_path,
-        scopes=['https://www.googleapis.com/auth/drive.readonly']
+        scopes=['https://www.googleapis.com/auth/drive']
     )
 
     # Build the Google Drive API client
