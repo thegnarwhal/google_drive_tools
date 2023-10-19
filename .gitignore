@@ -1,2 +1,7 @@
 # service user credential file
 /service.json
+/client_secret.json
+/credentials.json
+/credentials/client_secret.json
+/credentials/credentials.json
+/__pycache__
