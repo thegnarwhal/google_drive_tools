@@ -29,7 +29,7 @@ http://localhost and http://localhost:8080
 ```
 
 ### Step 4: Run Auth File & Generate credentials.json
-With your newly added `client_secret.json` file in Step 3, run `auth-file-name.py` and give Oauth consent. 
+With your newly added `client_secret.json` file in Step 3, run `authenticate_drive_api.py` and give Oauth consent. 
 
 This will generate a new file, `credentials.json`, in the credentials directory and complete the Oauth flow.
 
