@@ -16,16 +16,22 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the req
 pip install -r requirements.txt
 ```
 
-### Step 3: Configure Google Service Account
-Create a Project and Service Account. Follow:
+### Step 3: Configure Oauth 2.0 Client ID
+Create a Project and Oauth Client. Follow:
 * [Create Project](https://developers.google.com/workspace/guides/create-project) 
-* [Create Service Account](https://developers.google.com/workspace/guides/create-credentials) 
+* [Create Oauth Client ID](https://developers.google.com/identity/gsi/web/guides/get-google-api-clientid) 
 
-You will need to save the .json output to a new file later on.
+You will need to save the `client_secret.json` output and add it to the `/credentials` directory.
 
-Make sure to enable the Google Cloud Resource Manager API for your project.
+Make sure to enable the Google Cloud Resource Manager API for your project, and add the appropriate redirect URIs for running locally
+```
+http://localhost and http://localhost:8080
+```
 
-Grant access to your drive or folders in your drive to your newly created Service Account user, using the `client_email` value from your Service Account's .json file.
+### Step 4: Run Auth File & Generate credentials.json
+With your newly added `client_secret.json` file in Step 3, run `get_api_services.py` and give Oauth consent. 
+
+This will generate a new file, `credentials.json`, in the credentials directory and complete the Oauth flow.
 
 ## How to Use
 Please note: all script files identify a `source_id`. To find your folder's source id:
@@ -36,19 +42,19 @@ Please note: all script files identify a `source_id`. To find your folder's sour
 Finds a count of files and folders any given folder, using the folder's source ID.
 
 ```bash
-python count_files_and_folders.py --source_id <source ID> --credentials_path <path/to/service.json>
+python count_files_and_folders.py --source_id <source ID>
 ```
 
 ### count_files_and_folders_recursive.py
 Finds a count of all files and folders that are children of a given source ID.
 
 ```bash
-python count_files_and_folders_recursive.py --source_id <source ID>  --credentials_path <path/to/service.json>
+python count_files_and_folders_recursive.py --source_id <source ID> 
 ```
 
 ### copy_files_and_folders.py
 This script will create folders in the destination directory corresponding to the structure in the source directory and copy all files and subfolders recursively. 
 
 ```bash
-python copy_files_and_folders.py --source_id <source ID> --destination_id <destination ID>  --credentials_path <path/to/service.json>
+python copy_files_and_folders.py --source_id <source ID> --destination_id <destination ID>
 ```
