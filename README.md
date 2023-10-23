@@ -42,19 +42,19 @@ Please note: all script files identify a `source_id`. To find your folder's sour
 Finds a count of files and folders any given folder, using the folder's source ID.
 
 ```bash
-python count_files_and_folders.py --source_id <source ID> --credentials_path <path/to/service.json>
+python count_files_and_folders.py --source_id <source ID>
 ```
 
 ### count_files_and_folders_recursive.py
 Finds a count of all files and folders that are children of a given source ID.
 
 ```bash
-python count_files_and_folders_recursive.py --source_id <source ID>  --credentials_path <path/to/service.json>
+python count_files_and_folders_recursive.py --source_id <source ID> 
 ```
 
 ### copy_files_and_folders.py
 This script will create folders in the destination directory corresponding to the structure in the source directory and copy all files and subfolders recursively. 
 
 ```bash
-python copy_files_and_folders.py --source_id <source ID> --destination_id <destination ID>  --credentials_path <path/to/service.json>
+python copy_files_and_folders.py --source_id <source ID> --destination_id <destination ID>
 ```
