@@ -1,4 +1,3 @@
-import os
 import argparse
 from get_api_services import get_api_services
 
