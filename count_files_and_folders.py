@@ -1,11 +1,10 @@
 import os
 import argparse
-from googleapiclient.discovery import build
-from authenticate_drive_api import get_api_services
+from get_api_services import get_api_services
 
-def count_files_and_folders_recursive(drive_service, folder_id):
+def count_files_and_folders_recursive(drive, folder_id):
     # List files and folders in the specified folder
-    results = drive_service.files().list(
+    results = drive.files().list(
         q=f"'{folder_id}' in parents",
         fields='files(id, name, mimeType)'
     ).execute()
@@ -30,7 +29,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     # Authenticate with Google Drive API
-    drive_service = authenticate_drive_api(args.credentials_path)
+    drive_service = get_api_services()
 
     # Get the counts for files and folders in the specified folder
     file_count, folder_count = count_files_and_folders_recursive(drive_service, args.source_id)
