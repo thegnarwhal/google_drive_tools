@@ -17,7 +17,7 @@ pip install -r requirements.txt
 ```
 
 ### Step 3: Configure Oauth 2.0 Client ID
-Create a Project and Service Account. Follow:
+Create a Project and Oauth Client. Follow:
 * [Create Project](https://developers.google.com/workspace/guides/create-project) 
 * [Create Oauth Client ID](https://developers.google.com/identity/gsi/web/guides/get-google-api-clientid) 
 
@@ -29,7 +29,7 @@ http://localhost and http://localhost:8080
 ```
 
 ### Step 4: Run Auth File & Generate credentials.json
-With your newly added `client_secret.json` file in Step 3, run `authenticate_drive_api.py` and give Oauth consent. 
+With your newly added `client_secret.json` file in Step 3, run `get_api_services.py` and give Oauth consent. 
 
 This will generate a new file, `credentials.json`, in the credentials directory and complete the Oauth flow.
 
