@@ -38,6 +38,15 @@ Please note: all script files identify a `source_id`. To find your folder's sour
 1. Navigate to the folder in Google Drive.
 2. Copy the `source id` found in the URL. This is everything that comes after “folder/” in the URL. For example, if the URL was “https://drive.google.com/drive/folders/1dyUEebJaFnWa3Z4n0BFMVAXQ7mfUH11g”, then the `source_id` would be "1dyUEebJaFnWa3Z4n0BFMVAXQ7mfUH11g”
 
+### request_token.py
+Generates a new token when given a valid `client_secret.json` file as generated in Step 3 (above)
+
+```bash
+python request_token.py
+```
+
+And follow the prompts when opened in your browser.
+
 ### count_files_and_folders.py
 Finds a count of files and folders any given folder, using the folder's source ID.
 

@@ -16,7 +16,7 @@ def count_files_and_folders(drive, folder_id):
             if item['mimeType'] == 'application/vnd.google-apps.folder':
                 sub_folder_count, sub_file_count = count_recursive(item['id'])
                 folder_count += sub_folder_count + 1  # Counting the current folder
-                file_count += sub_file_count
+                #file_count += sub_file_count
             else:
                 file_count += 1
 
