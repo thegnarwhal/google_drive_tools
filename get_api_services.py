@@ -24,3 +24,6 @@ def get_api_services():
     drive = discovery.build('drive', 'v3', http=http)
 
     return drive
+
+if __name__ == '__main__':
+    get_api_services()
