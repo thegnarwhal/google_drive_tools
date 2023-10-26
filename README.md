@@ -42,7 +42,7 @@ Please note: all script files identify a `source_id`. To find your folder's sour
 Generates a new token when given a valid `client_secret.json` file as generated in Step 3 (above)
 
 ```bash
-python request_token.py
+python get_api_services.py
 ```
 
 And follow the prompts when opened in your browser.
